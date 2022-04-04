@@ -1,23 +1,3 @@
-import DiscordJS, { Intents } from 'discord.js';
-import dotenv from 'dotenv';
-dotenv.config();
+import {Bot} from './client/Bot';
 
-const client = new DiscordJS.Client({
-  intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-  ]
-});
-
-client.on('ready', () => {
-  console.log('Nosso bot está online com sucesso!');
-});
-
-client.on('messageCreate', (message) => {
-  if (message.content === 'oi') {
-    message.reply({
-      content: 'Olá'
-    });
-  }
-})
-client.login(process.env.TOKEN);
+new Bot().init();

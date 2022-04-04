@@ -5,7 +5,7 @@
   "license": "MIT",
   "main":"./src/index.js",
   "scripts": {
-    "dev": "ts-node ./src/index.js"
+    "dev": "ts-node src/index.ts"
   },
   "dependencies": {
     "discord.js": "^13.6.0",

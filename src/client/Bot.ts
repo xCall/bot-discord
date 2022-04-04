@@ -50,7 +50,7 @@ class Bot extends Client {
     this.on('ready', () => {
       this.registerCommands({
         commands: slashCommands,
-        guildId: process.env.TESTSERVER,
+        guildId: `${this.config.TESTSERVER}`,
       });
     });
 
